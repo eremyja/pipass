@@ -31,7 +31,7 @@ import adafruit_ssd1306
 from button_layout import button_A, button_B, button_C, button_U, button_D, button_L, button_R
 from setup_display import *
 
-setup_display.setup_display()
+#setup_display.setup_display()
 
 while True:
     if button_U.value: # button is released
