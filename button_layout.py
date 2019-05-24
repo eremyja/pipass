@@ -1,7 +1,7 @@
 ###
 # Requires:
-# import board
-# from digitalio import DigitalInOut, Direction, Pull
+import board
+from digitalio import DigitalInOut, Direction, Pull
 ###
 
 # Input pins:
