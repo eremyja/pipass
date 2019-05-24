@@ -29,7 +29,7 @@ from digitalio import DigitalInOut, Direction, Pull
 from PIL import Image, ImageDraw
 import adafruit_ssd1306
 from button_layout import button_A, button_B, button_C, button_U, button_D, button_L, button_R
-import setup_display
+from setup_display import *
 
 setup_display.setup_display()
 
