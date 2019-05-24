@@ -28,7 +28,7 @@ import busio
 from digitalio import DigitalInOut, Direction, Pull
 from PIL import Image, ImageDraw
 import adafruit_ssd1306
-import button_layout
+from button_layout import button_A, button_B, button_C, button_U, button_D, button_L, button_R
 
 # Create the I2C interface.
 i2c = busio.I2C(board.SCL, board.SDA)
