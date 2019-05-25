@@ -16,7 +16,9 @@ import textwrap
 
 fontname = "ProggyTiny.ttf"
 fontsize = 16
-c_c_c_combo = ""
+c_c_c_combo = []
+passfrase = ["U", "U", "D", "D", "R", "R", "B", "A"]
+button_press = ""
 
 def make_font(name, size) :
     font_path = os.path.abspath(os.path.join(
@@ -39,22 +41,32 @@ def text_input_test(device) :
 
 
 
-        wrap_text("Enter Password:\n" + c_c_c_combo)
+        wrap_text("Enter Password:\n" + button_press)
 
-#        if not button_U.value :
-#            wrap_text("Up")
-#        elif not button_D.value :
-#            wrap_text("Down")
-#        elif not button_L.value :
-#            wrap_text("Left")
-#        elif not button_R.value :
-#            wrap_text("Right")
-#        elif not button_C.value :
-#            wrap_text("Center")
-#        elif not button_A.value :
-#            wrap_text("A")
-#        elif not button_B.value :
-#            wrap_text("B")
+        if not button_U.value :
+            c_c_c_combo.append("U")
+            button_press = button_press + "*"
+        elif not button_D.value :
+            c_c_c_combo.append("D")
+            button_press = button_press + "*"
+        elif not button_L.value :
+            c_c_c_combo.append("L")
+            button_press = button_press + "*"
+        elif not button_R.value :
+            c_c_c_combo.append("R")
+            button_press = button_press + "*"
+        elif not button_A.value :
+            c_c_c_combo.append("A")
+            button_press = button_press + "*"
+        elif not button_B.value :
+            c_c_c_combo.append("B")
+            button_press = button_press + "*"
+        elif not button_C.value :
+            if c_c_c_combo == passfrase :
+                wrap_text("Yay! you did it!")
+            else :
+                wrap_text("fuck you")
+                c_c_c_combo = []
 
 #        if not button_U.value :
 #            wrap_text("Up")
