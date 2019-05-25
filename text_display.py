@@ -32,7 +32,7 @@ def wrap_text(text, row = 0) :
                     draw.text((0, y_text), line, font=font, fill="white")
                     y_text += 10
             else :
-                draw.text((0, y_text), lines, font=font, fill="white")
+                draw.text((0, y_text), lines[0], font=font, fill="white")
             y_text += 10
 
 def make_font(name, size) :
