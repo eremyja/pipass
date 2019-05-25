@@ -6,7 +6,7 @@ from button_layout import button_A, button_B, button_C, button_U, button_D, butt
 #from luma.core.interface.serial import i2c
 from luma.core.render import canvas
 #from luma.oled.device import ssd1306
-#from luma.core.virtual import terminal
+from luma.core.virtual import terminal
 from get_device import get_device
 from PIL import ImageFont
 import textwrap
@@ -46,7 +46,7 @@ def text_input_test(device, draw) :
 
     if not button_C.value :
         if c_c_c_combo == passfrase :
-            #device.clear()
+            term.clear()
             #with canvas(device) as draw :
             draw.rectangle(device.bounding_box, fill="black")
             wrap_text("Yay! you did it!")
@@ -54,7 +54,7 @@ def text_input_test(device, draw) :
             c_c_c_combo = []
             buttons_pressed = ""
         else :
-            #device.clear()
+            term.clear()
             #with canvas(device) as draw :
             draw.rectangle(device.bounding_box, fill="black")
             wrap_text("fuck you")
@@ -119,6 +119,7 @@ def text_input_test(device, draw) :
 
 def main() :
     while True :
+        term = terminal(device, font)
         with canvas(device) as draw:
             text_input_test(device, draw)
 
