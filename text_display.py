@@ -22,17 +22,17 @@ while True:
         font = make_font(fontname, size) if fontname else None
         term = terminal(device, font)
 
-        if button_U.value :
+        if not button_U.value :
             term.println("Pressing Up")
-        if button_D.value :
+        if not button_D.value :
             term.println("Pressing Down")
-        if button_L.value :
+        if not button_L.value :
             term.println("Pressing Left")
-        if button_R.value :
+        if not button_R.value :
             term.println("Pressing Right")
-        if button_A.value :
+        if not button_A.value :
             term.println("Pressing A")
-        if button_B.value :
+        if not button_B.value :
             term.println("Pressing B")
         else :
             term.println("Waiting for you to press something")
