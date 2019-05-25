@@ -2,7 +2,7 @@ import sys
 import logging
 from luma.core import cmdline, error
 
-def get_device_type(actual_args=None):
+def get_device(actual_args=None):
     """
     Create device from command-line arguments and return it.
     """

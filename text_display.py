@@ -7,7 +7,7 @@ from button_layout import button_A, button_B, button_C, button_U, button_D, butt
 #from luma.core.render import canvas
 #from luma.oled.device import ssd1306
 from luma.core.virtual import terminal
-from get_device import get_device_type
+from get_device import get_device
 from PIL import ImageFont
 
 #serial = i2c(port=1, address=0x3C)
@@ -40,7 +40,7 @@ def main() :
 
 if __name__ == "__main__":
     try:
-        device = get_device_type()
+        device = get_device()
         main()
     except KeyboardInterrupt:
         pass
