@@ -122,17 +122,17 @@ def text_input_test(device, font, wrap_text) : #, passfrase, c_c_c_combo, button
 def main() :
     #font = make_font(fontname, fontsize)
     locked = True
-    #with canvas(device) as draw :
-    wrap_text("Enter Password:")
-    wrap_text(buttons_pressed, 1)
-    while locked :
+    with canvas(device) as draw :
+        wrap_text("Enter Password:")
+        wrap_text(buttons_pressed, 1)
+        while locked :
         #with canvas(device) as draw:
 
-        locked = text_input_test(device, font, wrap_text) #, passfrase, c_c_c_combo, buttons_pressed)
+            locked = text_input_test(device, font, wrap_text) #, passfrase, c_c_c_combo, buttons_pressed)
 
     #with canvas(device) as draw :
-    wrap_text("Yay! you did it!")
-    time.sleep(5)
+        wrap_text("Yay! you did it!")
+        time.sleep(5)
 
 if __name__ == "__main__":
     try:
