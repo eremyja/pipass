@@ -50,11 +50,11 @@ def text_input_test(device) :
         else :
             #wrap_text("Press Something")
             draw.text((0,0), "Press something", font=font, fill="white")
-            draw.text((0,12), "Press something", font=font, fill="white")
-            draw.text((0,24), "Press something", font=font, fill="white")
-            draw.text((0,36), "Press something", font=font, fill="white")
-            draw.text((0,48), "Press something", font=font, fill="white")
-            draw.text((0,60), "Press something", font=font, fill="white")
+            draw.text((0,11), "Press something", font=font, fill="white")
+            draw.text((0,22), "Press something", font=font, fill="white")
+            draw.text((0,33), "Press something", font=font, fill="white")
+            draw.text((0,44), "Press something", font=font, fill="white")
+            draw.text((0,55), "Press something", font=font, fill="white")
 
 def main() :
     while True :
