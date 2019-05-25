@@ -18,6 +18,7 @@ fontname = "ProggyTiny.ttf"
 fontsize = 16
 c_c_c_combo = []
 passfrase = ["U", "U", "D", "D", "R", "R", "B", "A"]
+buttons_pressed = ""
 
 
 def make_font(name, size) :
@@ -26,6 +27,7 @@ def make_font(name, size) :
     return ImageFont.truetype(font_path, size)
 
 def text_input_test(device) :
+    global buttons_pressed
     #while True:
         #for fontname, size in [(None, None), ("tiny.ttf", 6), ("ProggyTiny.ttf", 16), ("creep.bdf", 16), ("miscfs_.ttf", 12), ("FreePixel.ttf", 12), ('ChiKareGo.ttf', 16)]:
     font = make_font(fontname, fontsize) if fontname else None
@@ -86,7 +88,6 @@ def text_input_test(device) :
 #            wrap_text("Press Something")
 
 def main() :
-    buttons_pressed = ""
     while True :
         text_input_test(device)
 
