@@ -44,9 +44,9 @@ while True:
 
     if not button_A.value and not button_B.value and not button_C.value:
         catImage = Image.open('happycat_oled_64.ppm').convert('1')
-        display.image(catImage)
+        device.display.image(catImage)
     else:
         # Display image.
-        display.image(image)
+        device.display.image(image)
 
-    display.show()
+    device.display.show()
