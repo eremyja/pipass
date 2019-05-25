@@ -59,7 +59,7 @@ def text_input_test(device, draw, font, wrap_text) : #, passfrase, c_c_c_combo, 
             return False
         else :
             #with canvas(device) as draw :
-            draw.rectangle(device.bounding_box, fill="black")
+            #draw.rectangle(device.bounding_box, fill="black")
             wrap_text("fuck you")
             time.sleep(5)
             c_c_c_combo = []
