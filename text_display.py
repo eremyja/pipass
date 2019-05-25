@@ -28,7 +28,7 @@ def text_input_test(device) :
     font = make_font(fontname, fontsize) if fontname else None
             #term = terminal(device, font)
     with canvas(device) as draw:
-        
+
         def wrap_text(text) :
             lines = textwrap.wrap(text, width=21)
             y_text = 0
@@ -51,7 +51,7 @@ def text_input_test(device) :
         elif not button_B.value :
             draw.text((0,0), "fuck you", font=font, fill="white")
         else :
-            wrap_text("Press Something. Press Something. Press Something. Press Something. Press Something. Press Something. Press Something.")
+            wrap_text("123456789012345678901234567890")
             #draw.text((0,0), "Press something", font=font, fill="white")
             #draw.text((0,10), "Press something", font=font, fill="white")
             #draw.text((0,20), "Press something", font=font, fill="white")
