@@ -14,7 +14,6 @@ import textwrap
 #serial = i2c(port=1, address=0x3C)
 #device = ssd1306(serial)
 
-buttons_pressed = ""
 fontname = "ProggyTiny.ttf"
 fontsize = 16
 c_c_c_combo = []
@@ -87,6 +86,7 @@ def text_input_test(device) :
 #            wrap_text("Press Something")
 
 def main() :
+    buttons_pressed = ""
     while True :
         text_input_test(device)
 
