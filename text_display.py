@@ -52,6 +52,7 @@ def text_input_test(device, draw, font) : #, passfrase, c_c_c_combo, buttons_pre
             time.sleep(5)
             c_c_c_combo = []
             buttons_pressed = ""
+            return False
         else :
             #with canvas(device) as draw :
             draw.rectangle(device.bounding_box, fill="black")
@@ -59,6 +60,7 @@ def text_input_test(device, draw, font) : #, passfrase, c_c_c_combo, buttons_pre
             time.sleep(5)
             c_c_c_combo = []
             buttons_pressed = ""
+            return True
     else :
         #with canvas(device) as draw:
 #            def wrap_text(text, row = 0) :
@@ -115,10 +117,10 @@ def text_input_test(device, draw, font) : #, passfrase, c_c_c_combo, buttons_pre
 
 def main() :
     font = make_font(fontname, fontsize)
-    term = terminal(device, font)
-    while True :
+    locked = True
+    while locked :
         with canvas(device) as draw:
-            text_input_test(device, draw, font) #, passfrase, c_c_c_combo, buttons_pressed)
+            locked = text_input_test(device, draw, font) #, passfrase, c_c_c_combo, buttons_pressed)
 
 if __name__ == "__main__":
     try:
