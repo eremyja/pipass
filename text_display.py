@@ -75,7 +75,8 @@ def text_input_test(device) :
             time.sleep(.1)
         elif not button_C.value :
             if c_c_c_combo == passfrase :
-                #device.clear()
+                device.clear()
+                time.sleep(.1)
                 wrap_text("Yay! you did it!")
                 time.sleep(10)
                 c_c_c_combo = []
@@ -83,7 +84,8 @@ def text_input_test(device) :
                 device.clear()
 
             else :
-                #device.clear()
+                device.clear()
+                time.sleep(.1)
                 wrap_text("fuck you")
                 time.sleep(10)
                 c_c_c_combo = []
