@@ -143,7 +143,7 @@ def main() :
     #with canvas(device) as draw :
     wrap_text("Yay! you did it!")
     time.sleep(1)
-    wrap_text("Yay! you did it!\n but still fuck you")
+    wrap_text("Yay! you did it!\nbut still fuck you")
     time.sleep(5)
 
 if __name__ == "__main__":
