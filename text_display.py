@@ -52,6 +52,7 @@ def text_input_test(device) :
             #draw.text((0,50), "Press something", font=font, fill="white")
 
 def wrap_text(text) :
+    global draw
     lines = textwrap.wrap(text, width=21)
     y_text = 0
     for line in lines:
