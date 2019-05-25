@@ -5,7 +5,8 @@
 #
 # TODO:
 #   - clear up imports
-#   - find a better solution for "wrap_text" 
+#   - find a better solution for "wrap_text"
+#   - prevent going off the bottom of the screen
 #
 ###
 import os
