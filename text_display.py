@@ -35,60 +35,59 @@ def text_input_test(device) :
         #for fontname, size in [(None, None), ("tiny.ttf", 6), ("ProggyTiny.ttf", 16), ("creep.bdf", 16), ("miscfs_.ttf", 12), ("FreePixel.ttf", 12), ('ChiKareGo.ttf', 16)]:
     font = make_font(fontname, fontsize) if fontname else None
             #term = terminal(device, font)
-    with canvas(device) as draw:
 
-        def wrap_text(text, row = 0) :
-            lines = textwrap.wrap(text, width=21)
-            y_text = row * 10
-            for line in lines:
-                draw.text((21, y_text), line, font=font, fill="white")
-                y_text += 10
+    if not button_C.value :
+        if c_c_c_combo == passfrase :
+            with canvas(device) as draw:
+                time.sleep(.1)
+                wrap_text("Yay! you did it!")
+                time.sleep(10)
+                c_c_c_combo = []
+                buttons_pressed = ""
+        else :
+            with canvas(device) as draw:
+                time.sleep(.1)
+                wrap_text("fuck you")
+                time.sleep(10)
+                c_c_c_combo = []
+                buttons_pressed = ""
+    else :
+        with canvas(device) as draw:
+            def wrap_text(text, row = 0) :
+                lines = textwrap.wrap(text, width=21)
+                y_text = row * 10
+                for line in lines:
+                    draw.text((21, y_text), line, font=font, fill="white")
+                    y_text += 10
 
+            wrap_text("Enter Password:")
+            wrap_text(buttons_pressed, 1)
 
+            if not button_U.value :
+                c_c_c_combo.append("U")
+                buttons_pressed = buttons_pressed + "*"
+                time.sleep(.2)
+            elif not button_D.value :
+                c_c_c_combo.append("D")
+                buttons_pressed = buttons_pressed + "*"
+                time.sleep(.2)
+            elif not button_L.value :
+                c_c_c_combo.append("L")
+                buttons_pressed = buttons_pressed + "*"
+                time.sleep(.2)
+            elif not button_R.value :
+                c_c_c_combo.append("R")
+                buttons_pressed = buttons_pressed + "*"
+                time.sleep(.2)
+            elif not button_A.value :
+                c_c_c_combo.append("A")
+                buttons_pressed = buttons_pressed + "*"
+                time.sleep(.2)
+            elif not button_B.value :
+                c_c_c_combo.append("B")
+                buttons_pressed = buttons_pressed + "*"
+                time.sleep(.2)
 
-        wrap_text("Enter Password:")
-        wrap_text(buttons_pressed, 1)
-
-        if not button_U.value :
-            c_c_c_combo.append("U")
-            buttons_pressed = buttons_pressed + "*"
-            time.sleep(.1)
-        elif not button_D.value :
-            c_c_c_combo.append("D")
-            buttons_pressed = buttons_pressed + "*"
-            time.sleep(.1)
-        elif not button_L.value :
-            c_c_c_combo.append("L")
-            buttons_pressed = buttons_pressed + "*"
-            time.sleep(.1)
-        elif not button_R.value :
-            c_c_c_combo.append("R")
-            buttons_pressed = buttons_pressed + "*"
-            time.sleep(.1)
-        elif not button_A.value :
-            c_c_c_combo.append("A")
-            buttons_pressed = buttons_pressed + "*"
-            time.sleep(.1)
-        elif not button_B.value :
-            c_c_c_combo.append("B")
-            buttons_pressed = buttons_pressed + "*"
-            time.sleep(.1)
-        elif not button_C.value :
-            if c_c_c_combo == passfrase :
-                with canvas(device) as draw:
-                    time.sleep(.1)
-                    wrap_text("Yay! you did it!")
-                    time.sleep(10)
-                    c_c_c_combo = []
-                    buttons_pressed = ""
-
-            else :
-                with canvas(device) as draw:
-                    time.sleep(.1)
-                    wrap_text("fuck you")
-                    time.sleep(10)
-                    c_c_c_combo = []
-                    buttons_pressed = ""
 
 
 #        if not button_U.value :
