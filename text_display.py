@@ -37,19 +37,19 @@ def text_input_test(device) :
                 y_text += 10
 
         if not button_U.value :
-            draw.text((0,0), "fuck you", font=font, fill="white")
+            wrap_text("fuckyoufuckyoufuckyoufuckyoufuckyoufuckyoufuckyoufuckyoufuckyoufuckyoufuckyoufuckyoufuckyoufuckyoufuckyoufuckyoufuckyoufuckyou")
         elif not button_D.value :
-            draw.text((0,0), "fuck you", font=font, fill="white")
+            wrap_text("fuckyoufuckyoufuckyoufuckyoufuckyoufuckyoufuckyoufuckyoufuckyoufuckyoufuckyoufuckyoufuckyoufuckyoufuckyou")
         elif not button_L.value :
-            draw.text((0,0), "fuck you", font=font, fill="white")
+            wrap_text("fuckyoufuckyoufuckyoufuckyoufuckyoufuckyou")
         elif not button_R.value :
-            draw.text((0,0), "fuck you", font=font, fill="white")
+            wrap_text("fuckyoufuckyoufuckyoufuckyoufuckyoufuckyoufuckyoufuckyoufuckyou")
         elif not button_C.value :
-            draw.text((0,0), "fuck you", font=font, fill="white")
+            wrap_text("fuckyoufuckyoufuckyoufuckyoufuckyoufuckyoufuckyoufuckyoufuckyoufuckyoufuckyoufuckyou")
         elif not button_A.value :
-            draw.text((0,0), "fuck you", font=font, fill="white")
+            wrap_text("fuckyoufuckyoufuckyoufuckyoufuckyoufuckyoufuckyoufuckyoufuckyoufuckyoufuckyoufuckyoufuckyoufuckyoufuckyou")
         elif not button_B.value :
-            draw.text((0,0), "fuck you", font=font, fill="white")
+            wrap_text("fuckyoufuckyoufuckyoufuckyoufuckyoufuckyoufuckyoufuckyoufuckyoufuckyoufuckyoufuckyoufuckyoufuckyoufuckyoufuckyoufuckyoufuckyoufuckyoufuckyoufuckyoufuckyoufuckyoufuckyoufuckyoufuckyoufuckyou")
         else :
             wrap_text("123456789012345678901234567890")
             #draw.text((0,0), "Press something", font=font, fill="white")
