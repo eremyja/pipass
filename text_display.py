@@ -17,18 +17,11 @@ import textwrap
 fontname = "ProggyTiny.ttf"
 fontsize = 16
 
-def wrap_text(text) :
-    global draw
-    lines = textwrap.wrap(text, width=21)
-    y_text = 0
-    for line in lines:
-        draw.text((21, y_text), line, font=font, fill="white")
-        y_text += 10
-
 def make_font(name, size) :
     font_path = os.path.abspath(os.path.join(
         os.path.dirname(__file__), 'fonts', name))
     return ImageFont.truetype(font_path, size)
+
 def text_input_test(device) :
     #while True:
         #for fontname, size in [(None, None), ("tiny.ttf", 6), ("ProggyTiny.ttf", 16), ("creep.bdf", 16), ("miscfs_.ttf", 12), ("FreePixel.ttf", 12), ('ChiKareGo.ttf', 16)]:
@@ -57,6 +50,13 @@ def text_input_test(device) :
             #draw.text((0,30), "Press something", font=font, fill="white")
             #draw.text((0,40), "Press something", font=font, fill="white")
             #draw.text((0,50), "Press something", font=font, fill="white")
+
+def wrap_text(text) :
+    lines = textwrap.wrap(text, width=21)
+    y_text = 0
+    for line in lines:
+        draw.text((21, y_text), line, font=font, fill="white")
+        y_text += 10
 
 def main() :
     while True :
