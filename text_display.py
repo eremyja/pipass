@@ -132,7 +132,7 @@ def main() :
         while locked :
         #with canvas(device) as draw:
 
-            locked = text_input_test(device, font, wrap_text) #, passfrase, c_c_c_combo, buttons_pressed)
+            locked = text_input_test(device, font, wrap_text, draw) #, passfrase, c_c_c_combo, buttons_pressed)
 
     #with canvas(device) as draw :
         wrap_text(draw, "Yay! you did it!")
