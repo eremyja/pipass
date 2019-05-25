@@ -46,7 +46,7 @@ def text_input_test(device, draw) :
 
     if not button_C.value :
         if c_c_c_combo == passfrase :
-            device.clear()
+            #device.clear()
             #with canvas(device) as draw :
             draw.rectangle(device.bounding_box, fill="black")
             wrap_text("Yay! you did it!")
@@ -54,7 +54,7 @@ def text_input_test(device, draw) :
             c_c_c_combo = []
             buttons_pressed = ""
         else :
-            device.clear()
+            #device.clear()
             #with canvas(device) as draw :
             draw.rectangle(device.bounding_box, fill="black")
             wrap_text("fuck you")
