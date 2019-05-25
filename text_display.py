@@ -36,7 +36,7 @@ def text_input_test(device) :
         lines = textwrap.wrap(text, width=21)
         y_text = row * 10
         for line in lines:
-            draw.text((21, y_text), line, font=font, fill="white")
+            draw.text((0, y_text), line, font=font, fill="white")
             y_text += 10
 
     #while True:
