@@ -27,7 +27,7 @@ def make_font(name, size) :
         os.path.dirname(__file__), 'fonts', name))
     return ImageFont.truetype(font_path, size)
 
-def text_input_test(device) :
+def text_input_test(device, draw) :
     global buttons_pressed
     global c_c_c_combo
     global passfrase
@@ -47,7 +47,7 @@ def text_input_test(device) :
     if not button_C.value :
         if c_c_c_combo == passfrase :
             device.clear()
-            with canvas(device) as draw :
+            #with canvas(device) as draw :
                 draw.rectangle(device.bounding_box, fill="black")
                 wrap_text("Yay! you did it!")
                 time.sleep(5)
@@ -55,14 +55,14 @@ def text_input_test(device) :
                 buttons_pressed = ""
         else :
             device.clear()
-            with canvas(device) as draw :
+            #with canvas(device) as draw :
                 draw.rectangle(device.bounding_box, fill="black")
                 wrap_text("fuck you")
                 time.sleep(5)
                 c_c_c_combo = []
                 buttons_pressed = ""
     else :
-        with canvas(device) as draw:
+        #with canvas(device) as draw:
 #            def wrap_text(text, row = 0) :
 #                lines = textwrap.wrap(text, width=21)
 #                y_text = row * 10
@@ -118,8 +118,9 @@ def text_input_test(device) :
 #            wrap_text("Press Something")
 
 def main() :
+    with canvas(device) as draw:
     while True :
-        text_input_test(device)
+        text_input_test(device, draw)
 
 if __name__ == "__main__":
     try:
