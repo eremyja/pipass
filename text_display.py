@@ -27,7 +27,7 @@ def make_font(name, size) :
         os.path.dirname(__file__), 'fonts', name))
     return ImageFont.truetype(font_path, size)
 
-def text_input_test(device, draw) :
+def text_input_test(device, draw, font) :
     global buttons_pressed
     global c_c_c_combo
     global passfrase
@@ -122,7 +122,7 @@ def main() :
         font = make_font(fontname, fontsize)
         term = terminal(device, font)
         with canvas(device) as draw:
-            text_input_test(device, draw)
+            text_input_test(device, draw, font)
 
 if __name__ == "__main__":
     try:
