@@ -101,7 +101,8 @@ def text_input_test(device, draw, font, wrap_text) : #, passfrase, c_c_c_combo, 
             c_c_c_combo.append("B")
             buttons_pressed = buttons_pressed + "*"
             time.sleep(.2)
-        return True
+        else
+            return True
 #        if not button_U.value :
 #            wrap_text("Up")
 #        elif not button_D.value :
