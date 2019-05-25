@@ -17,7 +17,6 @@ import time
 
 fontname = "ProggyTiny.ttf"
 fontsize = 16
-font = make_font(fontname, fontsize)
 c_c_c_combo = []
 passfrase = ["U", "U", "D", "D", "R", "R", "B", "A"]
 buttons_pressed = ""
@@ -34,6 +33,8 @@ def make_font(name, size) :
     font_path = os.path.abspath(os.path.join(
         os.path.dirname(__file__), 'fonts', name))
     return ImageFont.truetype(font_path, size)
+
+font = make_font(fontname, fontsize)
 
 def text_input_test(device, draw, font, wrap_text) : #, passfrase, c_c_c_combo, buttons_pressed) :
     global passfrase
