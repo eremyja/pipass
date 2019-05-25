@@ -101,8 +101,7 @@ def text_input_test(device, draw, font, wrap_text) : #, passfrase, c_c_c_combo, 
             c_c_c_combo.append("B")
             buttons_pressed = buttons_pressed + "*"
             time.sleep(.2)
-        else :
-            return True
+        return True
 #        if not button_U.value :
 #            wrap_text("Up")
 #        elif not button_D.value :
@@ -125,10 +124,10 @@ def main() :
     locked = True
     with canvas(device) as draw :
         while locked :
-        #with canvas(device) as draw:
-            wrap_text("Enter Password:")
-            wrap_text(buttons_pressed, 1)
-            locked = text_input_test(device, draw, font, wrap_text) #, passfrase, c_c_c_combo, buttons_pressed)
+            with canvas(device) as draw:
+                wrap_text("Enter Password:")
+                wrap_text(buttons_pressed, 1)
+                locked = text_input_test(device, draw, font, wrap_text) #, passfrase, c_c_c_combo, buttons_pressed)
 
     wrap_text("Yay! you did it!")
     time.sleep(5)
