@@ -17,13 +17,12 @@ import textwrap
 fontname = "ProggyTiny.ttf"
 fontsize = 16
 
-#def wrap_text(text) :
-#    lines = textwrap.wrap(text, width=21)
-#    y_text = h
-#    for line in lines:
-#        width, height = font.getsize(line)
-#        draw.text(((w - width) / 2, y_text), line, font=font, fill="white")
-#        y_text += height
+def wrap_text(text) :
+    lines = textwrap.wrap(text, width=21)
+    y_text = 0
+    for line in lines:
+        draw.text((21, y_text), line, font=font, fill="white")
+        y_text += 10
 
 def make_font(name, size) :
     font_path = os.path.abspath(os.path.join(
@@ -43,13 +42,15 @@ def text_input_test(device) :
             draw.text((0,0), "fuck you", font=font, fill="white")
         elif not button_R.value :
             draw.text((0,0), "fuck you", font=font, fill="white")
+        elif not button_C.value :
+            draw.text((0,0), "fuck you", font=font, fill="white")
         elif not button_A.value :
             draw.text((0,0), "fuck you", font=font, fill="white")
         elif not button_B.value :
             draw.text((0,0), "fuck you", font=font, fill="white")
         else :
-            #wrap_text("Press Something")
-            draw.text((0,0), "Press something", font=font, fill="white")
+            wrap_text("Press Something")
+            #draw.text((0,0), "Press something", font=font, fill="white")
             #draw.text((0,10), "Press something", font=font, fill="white")
             #draw.text((0,20), "Press something", font=font, fill="white")
             #draw.text((0,30), "Press something", font=font, fill="white")
