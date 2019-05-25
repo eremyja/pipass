@@ -27,7 +27,7 @@ def make_font(name, size) :
         os.path.dirname(__file__), 'fonts', name))
     return ImageFont.truetype(font_path, size)
 
-def text_input_test(device, draw, font) :
+def text_input_test(device, draw, font, term) :
     global buttons_pressed
     global c_c_c_combo
     global passfrase
@@ -118,11 +118,11 @@ def text_input_test(device, draw, font) :
 #            wrap_text("Press Something")
 
 def main() :
+    font = make_font(fontname, fontsize)
+    term = terminal(device, font)
     while True :
-        font = make_font(fontname, fontsize)
-        term = terminal(device, font)
         with canvas(device) as draw:
-            text_input_test(device, draw, font)
+            text_input_test(device, draw, font, term)
 
 if __name__ == "__main__":
     try:
