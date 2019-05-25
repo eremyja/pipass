@@ -9,6 +9,9 @@ from luma.oled.device import ssd1306
 from luma.core.virtual import terminal
 from PIL import ImageFont
 
+serial = i2c(port=1, address=0x3C)
+device = ssd1306(serial)
+
 def make_font(name, size):
     font_path = os.path.abspath(os.path.join(
         os.path.dirname(__file__), 'fonts', name))
