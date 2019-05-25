@@ -10,3 +10,4 @@ with canvas(device) as draw:
     draw.text((30, 40), "Hello World", fill="white")
 
 while True:
+    print(.)
