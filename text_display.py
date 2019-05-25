@@ -25,21 +25,21 @@ def text_input_test(device) :
         #for fontname, size in [(None, None), ("tiny.ttf", 6), ("ProggyTiny.ttf", 16), ("creep.bdf", 16), ("miscfs_.ttf", 12), ("FreePixel.ttf", 12), ('ChiKareGo.ttf', 16)]:
     font = make_font(fontname, fontsize) if fontname else None
             #term = terminal(device, font)
-
-    if not button_U.value :
-        draw.text((0,0), "Pressing Up", font=font, fill="white")
-    elif not button_D.value :
-        draw.text((0,0), "Pressing Down", font=font, fill="white")
-    elif not button_L.value :
-        draw.text((0,0), "Pressing Left", font=font, fill="white")
-    elif not button_R.value :
-        draw.text((0,0), "Pressing Right", font=font, fill="white")
-    elif not button_A.value :
-        draw.text((0,0), "Pressing A", font=font, fill="white")
-    elif not button_B.value :
-        draw.text((0,0), "Pressing B", font=font, fill="white")
-    else :
-        draw.text((0,0), "Waiting for you to press something", font=font, fill="white")
+    with canvas(device) as draw:
+        if not button_U.value :
+            draw.text((0,0), "Pressing Up", font=font, fill="white")
+        elif not button_D.value :
+            draw.text((0,0), "Pressing Down", font=font, fill="white")
+        elif not button_L.value :
+            draw.text((0,0), "Pressing Left", font=font, fill="white")
+        elif not button_R.value :
+            draw.text((0,0), "Pressing Right", font=font, fill="white")
+        elif not button_A.value :
+            draw.text((0,0), "Pressing A", font=font, fill="white")
+        elif not button_B.value :
+            draw.text((0,0), "Pressing B", font=font, fill="white")
+        else :
+            draw.text((0,0), "Waiting for you to press something", font=font, fill="white")
 
 def main() :
     while True :
