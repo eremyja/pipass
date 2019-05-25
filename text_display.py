@@ -27,9 +27,12 @@ def wrap_text(text, row = 0) :
         y_text = row * 10
         for each_line in lines_newline :
             lines = textwrap.wrap(each_line, width=21)
-            for line in lines :
-                draw.text((0, y_text), line, font=font, fill="white")
-                y_text += 10
+            if len(lines) > 1 :
+                for line in lines :
+                    draw.text((0, y_text), line, font=font, fill="white")
+                    y_text += 10
+            else :
+                draw.text((0, y_text), lines, font=font, fill="white")
             y_text += 10
 
 def make_font(name, size) :
