@@ -36,9 +36,24 @@ def text_input_test(device) :
                 draw.text((21, y_text), line, font=font, fill="white")
                 y_text += 10
 
-        c_c_c_combo = ""
 
-        wrap_text("Enter Password:" + c_c_c_combo)
+
+        wrap_text("Enter Password:\n" + c_c_c_combo)
+
+#        if not button_U.value :
+#            wrap_text("Up")
+#        elif not button_D.value :
+#            wrap_text("Down")
+#        elif not button_L.value :
+#            wrap_text("Left")
+#        elif not button_R.value :
+#            wrap_text("Right")
+#        elif not button_C.value :
+#            wrap_text("Center")
+#        elif not button_A.value :
+#            wrap_text("A")
+#        elif not button_B.value :
+#            wrap_text("B")
 
 #        if not button_U.value :
 #            wrap_text("Up")
@@ -58,6 +73,7 @@ def text_input_test(device) :
 #            wrap_text("Press Something")
 
 def main() :
+    c_c_c_combo = ""
     while True :
         text_input_test(device)
 
