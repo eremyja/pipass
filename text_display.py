@@ -48,24 +48,24 @@ def text_input_test(device, font, wrap_text) : #, passfrase, c_c_c_combo, button
     #font = make_font(fontname, fontsize) if fontname else None
             #term = terminal(device, font)
 
-    if not button_C.value :
-        if c_c_c_combo == passfrase :
-            #with canvas(device) as draw :
-            #draw.rectangle(device.bounding_box, fill="black")
-            #wrap_text("Yay! you did it!")
-            #time.sleep(5)
-            #c_c_c_combo = []
-            #buttons_pressed = ""
-            return False
+        if not button_C.value :
+            if c_c_c_combo == passfrase :
+                #with canvas(device) as draw :
+                #draw.rectangle(device.bounding_box, fill="black")
+                #wrap_text("Yay! you did it!")
+                #time.sleep(5)
+                #c_c_c_combo = []
+                #buttons_pressed = ""
+                return False
+            else :
+                #with canvas(device) as draw :
+                #draw.rectangle(device.bounding_box, fill="black")
+                wrap_text("fuck you")
+                time.sleep(5)
+                c_c_c_combo = []
+                buttons_pressed = ""
+                return True
         else :
-            #with canvas(device) as draw :
-            #draw.rectangle(device.bounding_box, fill="black")
-            wrap_text("fuck you")
-            time.sleep(5)
-            c_c_c_combo = []
-            buttons_pressed = ""
-            return True
-    else :
         #with canvas(device) as draw:
 #            def wrap_text(text, row = 0) :
 #                lines = textwrap.wrap(text, width=21)
@@ -77,31 +77,31 @@ def text_input_test(device, font, wrap_text) : #, passfrase, c_c_c_combo, button
         #wrap_text("Enter Password:")
         #wrap_text(buttons_pressed, 1)
 
-        if not button_U.value :
-            c_c_c_combo.append("U")
-            buttons_pressed = buttons_pressed + "*"
-            time.sleep(.2)
-        elif not button_D.value :
-            c_c_c_combo.append("D")
-            buttons_pressed = buttons_pressed + "*"
-            time.sleep(.2)
-        elif not button_L.value :
-            c_c_c_combo.append("L")
-            buttons_pressed = buttons_pressed + "*"
-            time.sleep(.2)
-        elif not button_R.value :
-            c_c_c_combo.append("R")
-            buttons_pressed = buttons_pressed + "*"
-            time.sleep(.2)
-        elif not button_A.value :
-            c_c_c_combo.append("A")
-            buttons_pressed = buttons_pressed + "*"
-            time.sleep(.2)
-        elif not button_B.value :
-            c_c_c_combo.append("B")
-            buttons_pressed = buttons_pressed + "*"
-            time.sleep(.2)
-        return True
+            if not button_U.value :
+                c_c_c_combo.append("U")
+                buttons_pressed = buttons_pressed + "*"
+                time.sleep(.2)
+            elif not button_D.value :
+                c_c_c_combo.append("D")
+                buttons_pressed = buttons_pressed + "*"
+                time.sleep(.2)
+            elif not button_L.value :
+                c_c_c_combo.append("L")
+                buttons_pressed = buttons_pressed + "*"
+                time.sleep(.2)
+            elif not button_R.value :
+                c_c_c_combo.append("R")
+                buttons_pressed = buttons_pressed + "*"
+                time.sleep(.2)
+            elif not button_A.value :
+                c_c_c_combo.append("A")
+                buttons_pressed = buttons_pressed + "*"
+                time.sleep(.2)
+            elif not button_B.value :
+                c_c_c_combo.append("B")
+                buttons_pressed = buttons_pressed + "*"
+                time.sleep(.2)
+            return True
 #        if not button_U.value :
 #            wrap_text("Up")
 #        elif not button_D.value :
