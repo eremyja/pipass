@@ -48,15 +48,15 @@ def text_input_test(device) :
         if c_c_c_combo == passfrase :
             with canvas(device) as draw:
                 wrap_text("Yay! you did it!")
-                time.sleep(10)
-                c_c_c_combo = []
-                buttons_pressed = ""
+                time.sleep(1)
+                #c_c_c_combo = []
+                #buttons_pressed = ""
         else :
             with canvas(device) as draw:
                 wrap_text("fuck you")
-                time.sleep(10)
-                c_c_c_combo = []
-                buttons_pressed = ""
+                time.sleep(1)
+                #c_c_c_combo = []
+                #buttons_pressed = ""
     else :
         with canvas(device) as draw:
 #            def wrap_text(text, row = 0) :
