@@ -21,23 +21,24 @@ c_c_c_combo = []
 passfrase = ["U", "U", "D", "D", "R", "R", "B", "A"]
 buttons_pressed = ""
 
+def wrap_text(text, row = 0) :
+    lines = textwrap.wrap(text, width=21)
+    y_text = row * 10
+    for line in lines:
+        draw.text((0, y_text), line, font=font, fill="white")
+        y_text += 10
 
 def make_font(name, size) :
     font_path = os.path.abspath(os.path.join(
         os.path.dirname(__file__), 'fonts', name))
     return ImageFont.truetype(font_path, size)
 
-def text_input_test(device, draw, font) : #, passfrase, c_c_c_combo, buttons_pressed) :
+def text_input_test(device, draw, font, wrap_text) : #, passfrase, c_c_c_combo, buttons_pressed) :
     global passfrase
     global c_c_c_combo
     global buttons_pressed
 
-    def wrap_text(text, row = 0) :
-        lines = textwrap.wrap(text, width=21)
-        y_text = row * 10
-        for line in lines:
-            draw.text((0, y_text), line, font=font, fill="white")
-            y_text += 10
+
 
     #while True:
         #for fontname, size in [(None, None), ("tiny.ttf", 6), ("ProggyTiny.ttf", 16), ("creep.bdf", 16), ("miscfs_.ttf", 12), ("FreePixel.ttf", 12), ('ChiKareGo.ttf', 16)]:
@@ -120,7 +121,7 @@ def main() :
     locked = True
     while locked :
         with canvas(device) as draw:
-            locked = text_input_test(device, draw, font) #, passfrase, c_c_c_combo, buttons_pressed)
+            locked = text_input_test(device, draw, font, wrap_text) #, passfrase, c_c_c_combo, buttons_pressed)
             wrap_text("Yay! you did it!")
             time.sleep(5)
 
