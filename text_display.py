@@ -18,6 +18,7 @@ fontname = "ProggyTiny.ttf"
 fontsize = 16
 
 def wrap_text(text) :
+    global draw
     lines = textwrap.wrap(text, width=21)
     y_text = 0
     for line in lines:
@@ -49,7 +50,7 @@ def text_input_test(device) :
         elif not button_B.value :
             draw.text((0,0), "fuck you", font=font, fill="white")
         else :
-            wrap_text("Press Something")
+            wrap_text("Press Something. Press Something. Press Something. Press Something. Press Something. Press Something. Press Something.")
             #draw.text((0,0), "Press something", font=font, fill="white")
             #draw.text((0,10), "Press something", font=font, fill="white")
             #draw.text((0,20), "Press something", font=font, fill="white")
