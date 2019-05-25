@@ -16,6 +16,7 @@ import textwrap
 
 fontname = "ProggyTiny.ttf"
 fontsize = 16
+c_c_c_combo = ""
 
 def make_font(name, size) :
     font_path = os.path.abspath(os.path.join(
@@ -73,7 +74,6 @@ def text_input_test(device) :
 #            wrap_text("Press Something")
 
 def main() :
-    c_c_c_combo = ""
     while True :
         text_input_test(device)
 
