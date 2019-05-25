@@ -14,7 +14,7 @@ from PIL import ImageFont
 #device = ssd1306(serial)
 
 fontname = "ProggyTiny.ttf"
-fontsize = 12
+fontsize = 16
 
 def make_font(name, size) :
     font_path = os.path.abspath(os.path.join(
