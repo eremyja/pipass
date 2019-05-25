@@ -41,7 +41,7 @@ def text_input_test(device, draw) :
 
     #while True:
         #for fontname, size in [(None, None), ("tiny.ttf", 6), ("ProggyTiny.ttf", 16), ("creep.bdf", 16), ("miscfs_.ttf", 12), ("FreePixel.ttf", 12), ('ChiKareGo.ttf', 16)]:
-    font = make_font(fontname, fontsize) if fontname else None
+    #font = make_font(fontname, fontsize) if fontname else None
             #term = terminal(device, font)
 
     if not button_C.value :
@@ -119,6 +119,7 @@ def text_input_test(device, draw) :
 
 def main() :
     while True :
+        font = make_font(fontname, fontsize)
         term = terminal(device, font)
         with canvas(device) as draw:
             text_input_test(device, draw)
