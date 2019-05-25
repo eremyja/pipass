@@ -1,3 +1,3 @@
-from lock_screen import main
+from lock_screen import *
 
 main()
