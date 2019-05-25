@@ -31,6 +31,14 @@ def text_input_test(device) :
     global buttons_pressed
     global c_c_c_combo
     global passfrase
+
+    def wrap_text(text, row = 0) :
+        lines = textwrap.wrap(text, width=21)
+        y_text = row * 10
+        for line in lines:
+            draw.text((21, y_text), line, font=font, fill="white")
+            y_text += 10
+            
     #while True:
         #for fontname, size in [(None, None), ("tiny.ttf", 6), ("ProggyTiny.ttf", 16), ("creep.bdf", 16), ("miscfs_.ttf", 12), ("FreePixel.ttf", 12), ('ChiKareGo.ttf', 16)]:
     font = make_font(fontname, fontsize) if fontname else None
@@ -53,12 +61,12 @@ def text_input_test(device) :
                 buttons_pressed = ""
     else :
         with canvas(device) as draw:
-            def wrap_text(text, row = 0) :
-                lines = textwrap.wrap(text, width=21)
-                y_text = row * 10
-                for line in lines:
-                    draw.text((21, y_text), line, font=font, fill="white")
-                    y_text += 10
+#            def wrap_text(text, row = 0) :
+#                lines = textwrap.wrap(text, width=21)
+#                y_text = row * 10
+#                for line in lines:
+#                    draw.text((21, y_text), line, font=font, fill="white")
+#                    y_text += 10
 
             wrap_text("Enter Password:")
             wrap_text(buttons_pressed, 1)
