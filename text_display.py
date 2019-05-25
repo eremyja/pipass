@@ -27,19 +27,19 @@ def main() :
             #term = terminal(device, font)
 
             if not button_U.value :
-                draw.text((0,0), "Pressing Up", font=font, fill=black)
+                draw.text((0,0), "Pressing Up", font=font, fill="white")
             elif not button_D.value :
-                term.println("Pressing Down")
+                draw.text((0,0), "Pressing Down", font=font, fill="white")
             elif not button_L.value :
-                term.println("Pressing Left")
+                draw.text((0,0), "Pressing Left", font=font, fill="white")
             elif not button_R.value :
-                term.println("Pressing Right")
+                draw.text((0,0), "Pressing Right", font=font, fill="white")
             elif not button_A.value :
-                term.println("Pressing A")
+                draw.text((0,0), "Pressing A", font=font, fill="white")
             elif not button_B.value :
-                term.println("Pressing B")
+                draw.text((0,0), "Pressing B", font=font, fill="white")
             else :
-                term.println("Waiting for you to press something")
+                draw.text((0,0), "Waiting for you to press something", font=font, fill="white")
 
 if __name__ == "__main__":
     try:
