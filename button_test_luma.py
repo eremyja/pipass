@@ -41,12 +41,3 @@ while True:
         draw.ellipse((100, 20, 120, 40), outline=255, fill=0) #B button
     else: # button is pressed:
         draw.ellipse((100, 20, 120, 40), outline=255, fill=1) #B button filled
-
-    if not button_A.value and not button_B.value and not button_C.value:
-        catImage = Image.open('happycat_oled_64.ppm').convert('1')
-        device.display.image(catImage)
-    else:
-        # Display image.
-        device.display.image(image)
-
-    device.display.show()
