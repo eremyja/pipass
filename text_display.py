@@ -28,6 +28,8 @@ def make_font(name, size) :
 
 def text_input_test(device) :
     global buttons_pressed
+    global c_c_c_combo
+    global passfrase
     #while True:
         #for fontname, size in [(None, None), ("tiny.ttf", 6), ("ProggyTiny.ttf", 16), ("creep.bdf", 16), ("miscfs_.ttf", 12), ("FreePixel.ttf", 12), ('ChiKareGo.ttf', 16)]:
     font = make_font(fontname, fontsize) if fontname else None
