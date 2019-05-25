@@ -36,11 +36,11 @@ def make_font(name, size) :
 
 font = make_font(fontname, fontsize)
 
-def text_input_test(device, draw, font, wrap_text) : #, passfrase, c_c_c_combo, buttons_pressed) :
+def text_input_test(device, font, wrap_text) : #, passfrase, c_c_c_combo, buttons_pressed) :
     global passfrase
     global c_c_c_combo
     global buttons_pressed
-
+    with canvas(device) as draw :
 
 
     #while True:
@@ -122,13 +122,14 @@ def text_input_test(device, draw, font, wrap_text) : #, passfrase, c_c_c_combo, 
 def main() :
     #font = make_font(fontname, fontsize)
     locked = True
-    with canvas(device) as draw :
+    #with canvas(device) as draw :
         while locked :
-            with canvas(device) as draw:
+            #with canvas(device) as draw:
                 wrap_text("Enter Password:")
                 wrap_text(buttons_pressed, 1)
-                locked = text_input_test(device, draw, font, wrap_text) #, passfrase, c_c_c_combo, buttons_pressed)
+                locked = text_input_test(device, font, wrap_text) #, passfrase, c_c_c_combo, buttons_pressed)
 
+    with canvas(device) as draw :
     wrap_text("Yay! you did it!")
     time.sleep(5)
 
