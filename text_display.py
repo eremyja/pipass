@@ -36,25 +36,25 @@ def text_input_test(device) :
             #term = terminal(device, font)
     with canvas(device) as draw:
         if not button_U.value :
-            draw.text((0,0), "Pressing Up", font=font, fill="white")
+            draw.text((0,0), "fuck you", font=font, fill="white")
         elif not button_D.value :
-            draw.text((0,0), "Pressing Down", font=font, fill="white")
+            draw.text((0,0), "fuck you", font=font, fill="white")
         elif not button_L.value :
-            draw.text((0,0), "Pressing Left", font=font, fill="white")
+            draw.text((0,0), "fuck you", font=font, fill="white")
         elif not button_R.value :
-            draw.text((0,0), "Pressing Right", font=font, fill="white")
+            draw.text((0,0), "fuck you", font=font, fill="white")
         elif not button_A.value :
-            draw.text((0,0), "Pressing A", font=font, fill="white")
+            draw.text((0,0), "fuck you", font=font, fill="white")
         elif not button_B.value :
-            draw.text((0,0), "Pressing B", font=font, fill="white")
+            draw.text((0,0), "fuck you", font=font, fill="white")
         else :
             #wrap_text("Press Something")
             draw.text((0,0), "Press something", font=font, fill="white")
-            draw.text((0,10), "Press something", font=font, fill="white")
-            draw.text((0,20), "Press something", font=font, fill="white")
-            draw.text((0,30), "Press something", font=font, fill="white")
-            draw.text((0,40), "Press something", font=font, fill="white")
-            draw.text((0,50), "Press something", font=font, fill="white")
+            #draw.text((0,10), "Press something", font=font, fill="white")
+            #draw.text((0,20), "Press something", font=font, fill="white")
+            #draw.text((0,30), "Press something", font=font, fill="white")
+            #draw.text((0,40), "Press something", font=font, fill="white")
+            #draw.text((0,50), "Press something", font=font, fill="white")
 
 def main() :
     while True :
