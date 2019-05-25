@@ -38,7 +38,7 @@ def text_input_test(device) :
         for line in lines:
             draw.text((21, y_text), line, font=font, fill="white")
             y_text += 10
-            
+
     #while True:
         #for fontname, size in [(None, None), ("tiny.ttf", 6), ("ProggyTiny.ttf", 16), ("creep.bdf", 16), ("miscfs_.ttf", 12), ("FreePixel.ttf", 12), ('ChiKareGo.ttf', 16)]:
     font = make_font(fontname, fontsize) if fontname else None
@@ -46,6 +46,7 @@ def text_input_test(device) :
 
     if not button_C.value :
         if c_c_c_combo == passfrase :
+            device.clear()
             with canvas(device) as draw:
                 time.sleep(.1)
                 wrap_text("Yay! you did it!")
@@ -53,6 +54,7 @@ def text_input_test(device) :
                 c_c_c_combo = []
                 buttons_pressed = ""
         else :
+            device.clear()
             with canvas(device) as draw:
                 time.sleep(.1)
                 wrap_text("fuck you")
@@ -60,6 +62,7 @@ def text_input_test(device) :
                 c_c_c_combo = []
                 buttons_pressed = ""
     else :
+        device.clear()
         with canvas(device) as draw:
 #            def wrap_text(text, row = 0) :
 #                lines = textwrap.wrap(text, width=21)
