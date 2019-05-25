@@ -21,13 +21,13 @@ c_c_c_combo = []
 passfrase = ["U", "U", "D", "D", "R", "R", "B", "A"]
 buttons_pressed = ""
 
-def wrap_text(text, row = 0) :
-    with canvas(device) as draw :
-        lines = textwrap.wrap(text, width=21)
-        y_text = row * 10
-        for line in lines:
-            draw.text((0, y_text), line, font=font, fill="white")
-            y_text += 10
+def wrap_text(text, row = 0, draw = draw) :
+    #with canvas(device) as draw :
+    lines = textwrap.wrap(text, width=21)
+    y_text = row * 10
+    for line in lines:
+        draw.text((0, y_text), line, font=font, fill="white")
+        y_text += 10
 
 def make_font(name, size) :
     font_path = os.path.abspath(os.path.join(
@@ -36,7 +36,7 @@ def make_font(name, size) :
 
 font = make_font(fontname, fontsize)
 
-def text_input_test(device, font, wrap_text) : #, passfrase, c_c_c_combo, buttons_pressed) :
+def text_input_test(device = device, font = font, wrap_text= wrap_text, draw = draw) : #, passfrase, c_c_c_combo, buttons_pressed) :
     global passfrase
     global c_c_c_combo
     global buttons_pressed
@@ -125,20 +125,20 @@ def text_input_test(device, font, wrap_text) : #, passfrase, c_c_c_combo, button
 def main() :
     #font = make_font(fontname, fontsize)
     locked = True
-    #with canvas(device) as draw :
+    with canvas(device) as draw :
         #wrap_text("Enter Password:")
         #wrap_text(buttons_pressed, 1)
         #time.sleep(1)
-    while locked :
+        while locked :
         #with canvas(device) as draw:
 
-        locked = text_input_test(device, font, wrap_text) #, passfrase, c_c_c_combo, buttons_pressed)
+            locked = text_input_test() #device, font, wrap_text) #, passfrase, c_c_c_combo, buttons_pressed)
 
     #with canvas(device) as draw :
-    wrap_text("Yay! you did it!")
-    time.sleep(1)
-    wrap_text("Yay! you did it!     but still fuck you")
-    time.sleep(5)
+        wrap_text("Yay! you did it!")
+        time.sleep(1)
+        wrap_text("Yay! you did it!     but still fuck you")
+        time.sleep(5)
 
 if __name__ == "__main__":
     try:
