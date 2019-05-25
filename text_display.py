@@ -14,7 +14,7 @@ import textwrap
 #serial = i2c(port=1, address=0x3C)
 #device = ssd1306(serial)
 
-button_press = ""
+buttons_pressed = ""
 fontname = "ProggyTiny.ttf"
 fontsize = 16
 c_c_c_combo = []
@@ -42,26 +42,26 @@ def text_input_test(device) :
 
 
 
-        wrap_text("Enter Password:\n" + button_press)
+        wrap_text("Enter Password:\n" + buttons_pressed)
 
         if not button_U.value :
             c_c_c_combo.append("U")
-            button_press = button_press + "*"
+            buttons_pressed = buttons_pressed + "*"
         elif not button_D.value :
             c_c_c_combo.append("D")
-            button_press = button_press + "*"
+            buttons_pressed = buttons_pressed + "*"
         elif not button_L.value :
             c_c_c_combo.append("L")
-            button_press = button_press + "*"
+            buttons_pressed = buttons_pressed + "*"
         elif not button_R.value :
             c_c_c_combo.append("R")
-            button_press = button_press + "*"
+            buttons_pressed = buttons_pressed + "*"
         elif not button_A.value :
             c_c_c_combo.append("A")
-            button_press = button_press + "*"
+            buttons_pressed = buttons_pressed + "*"
         elif not button_B.value :
             c_c_c_combo.append("B")
-            button_press = button_press + "*"
+            buttons_pressed = buttons_pressed + "*"
         elif not button_C.value :
             if c_c_c_combo == passfrase :
                 wrap_text("Yay! you did it!")
