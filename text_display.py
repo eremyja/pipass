@@ -118,8 +118,8 @@ def text_input_test(device, draw) :
 #            wrap_text("Press Something")
 
 def main() :
-    with canvas(device) as draw:
-        while True :
+    while True :
+        with canvas(device) as draw:
             text_input_test(device, draw)
 
 if __name__ == "__main__":
