@@ -74,8 +74,8 @@ def text_input_test(device, draw, font, wrap_text) : #, passfrase, c_c_c_combo, 
 #                    draw.text((21, y_text), line, font=font, fill="white")
 #                    y_text += 10
 
-        wrap_text("Enter Password:")
-        wrap_text(buttons_pressed, 1)
+        #wrap_text("Enter Password:")
+        #wrap_text(buttons_pressed, 1)
 
         if not button_U.value :
             c_c_c_combo.append("U")
@@ -121,11 +121,13 @@ def text_input_test(device, draw, font, wrap_text) : #, passfrase, c_c_c_combo, 
 
 def main() :
     #font = make_font(fontname, fontsize)
-    #locked = True
+    locked = True
     with canvas(device) as draw :
-        while text_input_test(device, draw, font, wrap_text) :
+        while locked :
         #with canvas(device) as draw:
-            #locked = text_input_test(device, draw, font, wrap_text) #, passfrase, c_c_c_combo, buttons_pressed)
+            wrap_text("Enter Password:")
+            wrap_text(buttons_pressed, 1)
+            locked = text_input_test(device, draw, font, wrap_text) #, passfrase, c_c_c_combo, buttons_pressed)
 
     wrap_text("Yay! you did it!")
     time.sleep(5)
