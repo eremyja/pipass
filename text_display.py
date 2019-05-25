@@ -22,11 +22,12 @@ passfrase = ["U", "U", "D", "D", "R", "R", "B", "A"]
 buttons_pressed = ""
 
 def wrap_text(text, row = 0) :
-    lines = textwrap.wrap(text, width=21)
-    y_text = row * 10
-    for line in lines:
-        draw.text((0, y_text), line, font=font, fill="white")
-        y_text += 10
+    with canvas(device) as draw :
+        lines = textwrap.wrap(text, width=21)
+        y_text = row * 10
+        for line in lines:
+            draw.text((0, y_text), line, font=font, fill="white")
+            y_text += 10
 
 def make_font(name, size) :
     font_path = os.path.abspath(os.path.join(
