@@ -53,6 +53,8 @@ def text_input_test(device) :
             draw.text((0,12), "Press something", font=font, fill="white")
             draw.text((0,24), "Press something", font=font, fill="white")
             draw.text((0,36), "Press something", font=font, fill="white")
+            draw.text((0,48), "Press something", font=font, fill="white")
+            draw.text((0,60), "Press something", font=font, fill="white")
 
 def main() :
     while True :
