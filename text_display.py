@@ -64,7 +64,7 @@ def text_input_test(device, font, wrap_text) : #, passfrase, c_c_c_combo, button
                 time.sleep(5)
                 c_c_c_combo = []
                 buttons_pressed = ""
-                locked True
+                locked = True
         else :
         #with canvas(device) as draw:
 #            def wrap_text(text, row = 0) :
