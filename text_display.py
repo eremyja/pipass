@@ -125,6 +125,7 @@ def main() :
     with canvas(device) as draw :
         wrap_text("Enter Password:")
         wrap_text(buttons_pressed, 1)
+        time.sleep(1)
         while locked :
         #with canvas(device) as draw:
 
