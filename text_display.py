@@ -125,8 +125,9 @@ def main() :
     while locked :
         with canvas(device) as draw:
             locked = text_input_test(device, draw, font, wrap_text) #, passfrase, c_c_c_combo, buttons_pressed)
-            wrap_text("Yay! you did it!")
-            time.sleep(5)
+
+    wrap_text("Yay! you did it!")
+    time.sleep(5)
 
 if __name__ == "__main__":
     try:
