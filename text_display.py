@@ -14,11 +14,12 @@ import textwrap
 #serial = i2c(port=1, address=0x3C)
 #device = ssd1306(serial)
 
+button_press = ""
 fontname = "ProggyTiny.ttf"
 fontsize = 16
 c_c_c_combo = []
 passfrase = ["U", "U", "D", "D", "R", "R", "B", "A"]
-button_press = ""
+
 
 def make_font(name, size) :
     font_path = os.path.abspath(os.path.join(
