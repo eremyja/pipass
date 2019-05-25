@@ -52,39 +52,43 @@ def text_input_test(device) :
         if not button_U.value :
             c_c_c_combo.append("U")
             buttons_pressed = buttons_pressed + "*"
-            time.sleep(2)
+            time.sleep(1)
         elif not button_D.value :
             c_c_c_combo.append("D")
             buttons_pressed = buttons_pressed + "*"
-            time.sleep(2)
+            time.sleep(1)
         elif not button_L.value :
             c_c_c_combo.append("L")
             buttons_pressed = buttons_pressed + "*"
-            time.sleep(2)
+            time.sleep(1)
         elif not button_R.value :
             c_c_c_combo.append("R")
             buttons_pressed = buttons_pressed + "*"
-            time.sleep(2)
+            time.sleep(1)
         elif not button_A.value :
             c_c_c_combo.append("A")
             buttons_pressed = buttons_pressed + "*"
-            time.sleep(2)
+            time.sleep(1)
         elif not button_B.value :
             c_c_c_combo.append("B")
             buttons_pressed = buttons_pressed + "*"
-            time.sleep(2)
+            time.sleep(1)
         elif not button_C.value :
             if c_c_c_combo == passfrase :
-                luma.oled.device.ssd1306.clear()
+                device.clear()
                 wrap_text("Yay! you did it!")
                 time.sleep(10)
-            else :
-                luma.oled.device.ssd1306.clear()
-                wrap_text("fuck you")
                 c_c_c_combo = []
                 buttons_pressed = ""
+                device.clear()
+
+            else :
+                device.clear()
+                wrap_text("fuck you")
                 time.sleep(10)
-                luma.oled.device.ssd1306.clear()
+                c_c_c_combo = []
+                buttons_pressed = ""
+                device.clear()
 
 
 #        if not button_U.value :
