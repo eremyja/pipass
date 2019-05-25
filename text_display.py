@@ -7,7 +7,7 @@ from button_layout import button_A, button_B, button_C, button_U, button_D, butt
 #from luma.core.render import canvas
 #from luma.oled.device import ssd1306
 from luma.core.virtual import terminal
-from examples\demo_opts import get_device
+from get_device import get_device
 from PIL import ImageFont
 
 #serial = i2c(port=1, address=0x3C)
