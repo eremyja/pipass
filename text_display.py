@@ -13,27 +13,30 @@ from PIL import ImageFont
 #serial = i2c(port=1, address=0x3C)
 #device = ssd1306(serial)
 
+fontname = "ProggyTiny.ttf"
+fontsize = 16
+
 def make_font(name, size) :
     font_path = os.path.abspath(os.path.join(
         os.path.dirname(__file__), 'fonts', name))
     return ImageFont.truetype(font_path, size)
 def main() :
     while True:
-        for fontname, size in [(None, None), ("tiny.ttf", 6), ("ProggyTiny.ttf", 16), ("creep.bdf", 16), ("miscfs_.ttf", 12), ("FreePixel.ttf", 12), ('ChiKareGo.ttf', 16)]:
-            font = make_font(fontname, size) if fontname else None
+        #for fontname, size in [(None, None), ("tiny.ttf", 6), ("ProggyTiny.ttf", 16), ("creep.bdf", 16), ("miscfs_.ttf", 12), ("FreePixel.ttf", 12), ('ChiKareGo.ttf', 16)]:
+            font = make_font(fontname, fontsize) if fontname else None
             term = terminal(device, font)
 
             if not button_U.value :
                 term.println("Pressing Up")
-            if not button_D.value :
+            elif not button_D.value :
                 term.println("Pressing Down")
-            if not button_L.value :
+            elif not button_L.value :
                 term.println("Pressing Left")
-            if not button_R.value :
+            elif not button_R.value :
                 term.println("Pressing Right")
-            if not button_A.value :
+            elif not button_A.value :
                 term.println("Pressing A")
-            if not button_B.value :
+            elif not button_B.value :
                 term.println("Pressing B")
             else :
                 term.println("Waiting for you to press something")
