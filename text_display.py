@@ -119,8 +119,8 @@ def text_input_test(device, draw) :
 
 def main() :
     with canvas(device) as draw:
-    while True :
-        text_input_test(device, draw)
+        while True :
+            text_input_test(device, draw)
 
 if __name__ == "__main__":
     try:
