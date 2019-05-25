@@ -20,7 +20,7 @@ def make_font(name, size) :
     font_path = os.path.abspath(os.path.join(
         os.path.dirname(__file__), 'fonts', name))
     return ImageFont.truetype(font_path, size)
-def main() :
+def main(device) :
     while True:
         #for fontname, size in [(None, None), ("tiny.ttf", 6), ("ProggyTiny.ttf", 16), ("creep.bdf", 16), ("miscfs_.ttf", 12), ("FreePixel.ttf", 12), ('ChiKareGo.ttf', 16)]:
             font = make_font(fontname, fontsize) if fontname else None
