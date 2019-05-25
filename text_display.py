@@ -36,28 +36,26 @@ def text_input_test(device) :
                 draw.text((21, y_text), line, font=font, fill="white")
                 y_text += 10
 
-        if not button_U.value :
-            wrap_text("fuckyoufuckyoufuckyoufuckyoufuckyoufuckyoufuckyoufuckyoufuckyoufuckyoufuckyoufuckyoufuckyoufuckyoufuckyoufuckyoufuckyoufuckyou")
-        elif not button_D.value :
-            wrap_text("fuckyoufuckyoufuckyoufuckyoufuckyoufuckyoufuckyoufuckyoufuckyoufuckyoufuckyoufuckyoufuckyoufuckyoufuckyou")
-        elif not button_L.value :
-            wrap_text("fuckyoufuckyoufuckyoufuckyoufuckyoufuckyou")
-        elif not button_R.value :
-            wrap_text("fuckyoufuckyoufuckyoufuckyoufuckyoufuckyoufuckyoufuckyoufuckyou")
-        elif not button_C.value :
-            wrap_text("fuckyoufuckyoufuckyoufuckyoufuckyoufuckyoufuckyoufuckyoufuckyoufuckyoufuckyoufuckyou")
-        elif not button_A.value :
-            wrap_text("fuckyoufuckyoufuckyoufuckyoufuckyoufuckyoufuckyoufuckyoufuckyoufuckyoufuckyoufuckyoufuckyoufuckyoufuckyou")
-        elif not button_B.value :
-            wrap_text("fuckyoufuckyoufuckyoufuckyoufuckyoufuckyoufuckyoufuckyoufuckyoufuckyoufuckyoufuckyoufuckyoufuckyoufuckyoufuckyoufuckyoufuckyoufuckyoufuckyoufuckyoufuckyoufuckyoufuckyoufuckyoufuckyoufuckyou")
-        else :
-            wrap_text("123456789012345678901234567890")
-            #draw.text((0,0), "Press something", font=font, fill="white")
-            #draw.text((0,10), "Press something", font=font, fill="white")
-            #draw.text((0,20), "Press something", font=font, fill="white")
-            #draw.text((0,30), "Press something", font=font, fill="white")
-            #draw.text((0,40), "Press something", font=font, fill="white")
-            #draw.text((0,50), "Press something", font=font, fill="white")
+        c_c_c_combo = ""
+
+        wrap_text("Enter Password:" + c_c_c_combo)
+
+#        if not button_U.value :
+#            wrap_text("Up")
+#        elif not button_D.value :
+#            wrap_text("Down")
+#        elif not button_L.value :
+#            wrap_text("Left")
+#        elif not button_R.value :
+#            wrap_text("Right")
+#        elif not button_C.value :
+#            wrap_text("Center")
+#        elif not button_A.value :
+#            wrap_text("A")
+#        elif not button_B.value :
+#            wrap_text("B")
+#        else :
+#            wrap_text("Press Something")
 
 def main() :
     while True :
