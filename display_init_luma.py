@@ -8,3 +8,5 @@ device = ssd1306(serial)
 with canvas(device) as draw:
     draw.rectangle(device.bounding_box, outline="white", fill="black")
     draw.text((30, 40), "Hello World", fill="white")
+
+while True:
