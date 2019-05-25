@@ -122,8 +122,9 @@ def text_input_test(device, draw, font, wrap_text) : #, passfrase, c_c_c_combo, 
 def main() :
     #font = make_font(fontname, fontsize)
     locked = True
-    while locked :
-        with canvas(device) as draw:
+    with canvas(device) as draw :
+        while locked :
+        #with canvas(device) as draw:
             locked = text_input_test(device, draw, font, wrap_text) #, passfrase, c_c_c_combo, buttons_pressed)
 
     wrap_text("Yay! you did it!")
