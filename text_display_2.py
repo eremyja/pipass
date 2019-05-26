@@ -53,9 +53,6 @@ class lock_screen :
 
 # main lock script. TODO: figure out global bs
     def padlock(device, font, wrap_text) : #, lock_screen.passfrase, lock_screen.c_c_c_combo, lock_screen.buttons_pressed) :
-        global lock_screen.passfrase
-        global lock_screen.c_c_c_combo
-        global lock_screen.buttons_pressed
 
     # Code submitted
         if not button_C.value :
