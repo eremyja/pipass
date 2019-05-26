@@ -29,7 +29,7 @@ locked = True
 
     # Device locked
 while locked :
-    locked = lock_screen.padlock(device, font, wrap_text) #, passfrase, c_c_c_combo, buttons_pressed)
+    locked = lock_screen.padlock(device, text_display_2.font, text_display_2.wrap_text) #, passfrase, c_c_c_combo, buttons_pressed)
 
     # Device unlocked
 wrap_text("Yay! you did it!")
