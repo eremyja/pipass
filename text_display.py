@@ -103,7 +103,7 @@ class lock_screen :
 
     # Device locked
         while locked :
-            locked = padlock(device, font, wrap_text) #, passfrase, c_c_c_combo, buttons_pressed)
+            locked = self.padlock(device, font, wrap_text) #, passfrase, c_c_c_combo, buttons_pressed)
 
     # Device unlocked
         wrap_text("Yay! you did it!")
