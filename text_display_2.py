@@ -24,11 +24,11 @@ import time
 class lock_screen :
 
 # Variables TODO: establish a better place for these
-    lock_screen.fontname = "ProggyTiny.ttf"
-    lock_screen.fontsize = 16
-    lock_screen.c_c_c_combo = []
-    lock_screen.passfrase = ["U", "U", "D", "D", "R", "R", "B", "A"]
-    lock_screen.buttons_pressed = ""
+    fontname = "ProggyTiny.ttf"
+    fontsize = 16
+    c_c_c_combo = []
+    passfrase = ["U", "U", "D", "D", "R", "R", "B", "A"]
+    buttons_pressed = ""
 
     def wrap_text(text, row = 0) :
         with canvas(device) as draw :
