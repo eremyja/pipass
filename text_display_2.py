@@ -20,7 +20,6 @@ from get_device import get_device
 from PIL import ImageFont
 import textwrap
 import time
-from text_display import lock_screen
 
 class lock_screen :
 
