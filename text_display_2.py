@@ -29,6 +29,7 @@ class lock_screen :
     c_c_c_combo = []
     passfrase = ["U", "U", "D", "D", "R", "R", "B", "A"]
     buttons_pressed = ""
+    device = get_device()
 
     def wrap_text(text, row = 0) :
         with canvas(device) as draw :
