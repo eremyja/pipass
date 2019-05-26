@@ -98,20 +98,3 @@ class lock_screen :
                 wrap_text("Enter Password:\n" + buttons_pressed)
 
             return True
-
-    #def main() :
-device = get_device()
-
-locked = True
-
-    # Device locked
-while locked :
-    locked = lock_screen.padlock(device, font, wrap_text) #, passfrase, c_c_c_combo, buttons_pressed)
-
-    # Device unlocked
-wrap_text("Yay! you did it!")
-time.sleep(1)
-wrap_text("Yay! you did it!\nbut still fuck you")
-time.sleep(5)
-
-    #main()
