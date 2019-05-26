@@ -20,6 +20,7 @@ from get_device import get_device
 from PIL import ImageFont
 import textwrap
 import time
+from text_display import lock_screen
 
 class lock_screen :
 
@@ -98,18 +99,19 @@ class lock_screen :
 
             return True
 
-    def main() :
-        locked = True
+    #def main() :
+device = get_device()
+
+locked = True
 
     # Device locked
-        while locked :
-            locked = self.padlock(device, font, wrap_text) #, passfrase, c_c_c_combo, buttons_pressed)
+while locked :
+    locked = lock_screen.padlock(device, font, wrap_text) #, passfrase, c_c_c_combo, buttons_pressed)
 
     # Device unlocked
-        wrap_text("Yay! you did it!")
-        time.sleep(1)
-        wrap_text("Yay! you did it!\nbut still fuck you")
-        time.sleep(5)
+wrap_text("Yay! you did it!")
+time.sleep(1)
+wrap_text("Yay! you did it!\nbut still fuck you")
+time.sleep(5)
 
-    device = get_device()
-    main()
+    #main()
