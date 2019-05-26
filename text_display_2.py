@@ -1,7 +1,7 @@
 ###
 #
 # Lock screen
-#   - requires user to input "c_c_c_combo" to equal "passfrase"
+#   - requires user to input "lock_screen.c_c_c_combo" to equal "lock_screen.passfrase"
 #
 # TODO:
 #   - clear up imports
@@ -24,11 +24,11 @@ import time
 class lock_screen :
 
 # Variables TODO: establish a better place for these
-    fontname = "ProggyTiny.ttf"
-    fontsize = 16
-    c_c_c_combo = []
-    passfrase = ["U", "U", "D", "D", "R", "R", "B", "A"]
-    buttons_pressed = ""
+    lock_screen.fontname = "ProggyTiny.ttf"
+    lock_screen.fontsize = 16
+    lock_screen.c_c_c_combo = []
+    lock_screen.passfrase = ["U", "U", "D", "D", "R", "R", "B", "A"]
+    lock_screen.buttons_pressed = ""
 
     def wrap_text(text, row = 0) :
         with canvas(device) as draw :
@@ -49,51 +49,51 @@ class lock_screen :
             os.path.dirname(__file__), 'fonts', name))
         return ImageFont.truetype(font_path, size)
 
-    font = make_font(fontname, fontsize)
+    font = make_font(lock_screen.fontname, lock_screen.fontsize)
 
 # main lock script. TODO: figure out global bs
-    def padlock(device, font, wrap_text) : #, passfrase, c_c_c_combo, buttons_pressed) :
-        global passfrase
-        global c_c_c_combo
-        global buttons_pressed
+    def padlock(device, font, wrap_text) : #, lock_screen.passfrase, lock_screen.c_c_c_combo, lock_screen.buttons_pressed) :
+        global lock_screen.passfrase
+        global lock_screen.c_c_c_combo
+        global lock_screen.buttons_pressed
 
     # Code submitted
         if not button_C.value :
-            if c_c_c_combo == passfrase :
+            if lock_screen.c_c_c_combo == lock_screen.passfrase :
                 return False
             else :
                 wrap_text("fuck you")
                 time.sleep(5)
-                c_c_c_combo = []
-                buttons_pressed = ""
+                lock_screen.c_c_c_combo = []
+                lock_screen.buttons_pressed = ""
                 return True
     # Not Submitted
         else :
             if not button_U.value :
-                c_c_c_combo.append("U")
-                buttons_pressed = buttons_pressed + "*"
+                lock_screen.c_c_c_combo.append("U")
+                lock_screen.buttons_pressed = lock_screen.buttons_pressed + "*"
                 time.sleep(.2)
             elif not button_D.value :
-                c_c_c_combo.append("D")
-                buttons_pressed = buttons_pressed + "*"
+                lock_screen.c_c_c_combo.append("D")
+                lock_screen.buttons_pressed = lock_screen.buttons_pressed + "*"
                 time.sleep(.2)
             elif not button_L.value :
-                c_c_c_combo.append("L")
-                buttons_pressed = buttons_pressed + "*"
+                lock_screen.c_c_c_combo.append("L")
+                lock_screen.buttons_pressed = lock_screen.buttons_pressed + "*"
                 time.sleep(.2)
             elif not button_R.value :
-                c_c_c_combo.append("R")
-                buttons_pressed = buttons_pressed + "*"
+                lock_screen.c_c_c_combo.append("R")
+                lock_screen.buttons_pressed = lock_screen.buttons_pressed + "*"
                 time.sleep(.2)
             elif not button_A.value :
-                c_c_c_combo.append("A")
-                buttons_pressed = buttons_pressed + "*"
+                lock_screen.c_c_c_combo.append("A")
+                lock_screen.buttons_pressed = lock_screen.buttons_pressed + "*"
                 time.sleep(.2)
             elif not button_B.value :
-                c_c_c_combo.append("B")
-                buttons_pressed = buttons_pressed + "*"
+                lock_screen.c_c_c_combo.append("B")
+                lock_screen.buttons_pressed = lock_screen.buttons_pressed + "*"
                 time.sleep(.2)
             else :
-                wrap_text("Enter Password:\n" + buttons_pressed)
+                wrap_text("Enter Password:\n" + lock_screen.buttons_pressed)
 
             return True
