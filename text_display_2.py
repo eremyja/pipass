@@ -49,7 +49,7 @@ class lock_screen :
             os.path.dirname(__file__), 'fonts', name))
         return ImageFont.truetype(font_path, size)
 
-    font = make_font(lock_screen.fontname, lock_screen.fontsize)
+    font = make_font(fontname, fontsize)
 
 # main lock script. TODO: figure out global bs
     def padlock(device, font, wrap_text) : #, lock_screen.passfrase, lock_screen.c_c_c_combo, lock_screen.buttons_pressed) :
